@@ -11,19 +11,13 @@ try:
     browser.get(link)
 
     x_element = browser.find_element_by_id("input_value")
-    x = x_element.text
-    y = calc(x)
+    y = calc(x_element.text)
     
     
-    input1 = browser.find_element_by_id("answer")
-    input1.send_keys(y)
-    checkbox1 = browser.find_element_by_id("robotCheckbox")
-    checkbox1.click()
-    radiobtn1 = browser.find_element_by_css_selector("[value='robots']")
-    radiobtn1.click()
-   
-    btn1 = browser.find_element_by_class_name("btn.btn-default")
-    btn1.click()
+    browser.find_element_by_id("answer").send_keys(y)
+    browser.find_element_by_id("robotCheckbox").click()
+    browser.find_element_by_css_selector("[value='robots']").click()
+    browser.find_element_by_class_name("btn.btn-default").click()
 
 
 finally:
