@@ -10,7 +10,7 @@ try:
     p2 = browser.window_handles[1]
     browser.switch_to.window(p2)
      
-    number =browser.find_element_by_id("input_value").text
+    number = browser.find_element_by_id("input_value").text
     conv_num1 = str(math.log(abs(12*math.sin(int(number)))))
     browser.find_element_by_class_name("form-control").send_keys(conv_num1)
     browser.find_element_by_class_name("btn.btn-primary").click()
